@@ -14,7 +14,7 @@
 }
 .modal > div:nth-child(1) {
   border-bottom: 1px solid grey;
-  padding-bottom: 5px
+  padding-bottom: 5px;
 }
 .modal > div {
   margin: 5px 0;

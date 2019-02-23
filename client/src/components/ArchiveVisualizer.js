@@ -3,11 +3,10 @@ import Spinner from './Spinner';
 
 class ArchiveVisualizer extends Component {
   componentDidMount() {
-    const { url, date } = this.props.match.params
+    const { url, date } = this.props.match.params;
     this.props.onMount(url, date);
   }
   render() {
-    console.log(this.props);
     return (
       <Fragment>
         {this.props.onLoading ? <Spinner /> : <iframe title="view" srcDoc={this.props.content} />}

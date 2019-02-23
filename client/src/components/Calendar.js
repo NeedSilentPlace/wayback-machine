@@ -7,7 +7,7 @@ class Calendar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      year: 2019,
+      year: new Date().getFullYear(),
       archiveTime: []
     };
 
@@ -16,7 +16,6 @@ class Calendar extends Component {
     this.onClickNext = this.onClickNext.bind(this);
     this.onClickPrev = this.onClickPrev.bind(this);
   }
-
   makeMonthCalendar(mon, year) {
     const mark = this.props.mark.map(date => {
       const localTime = new Date(date);
@@ -91,7 +90,6 @@ class Calendar extends Component {
       );
     }
   }
-
   onClickMarker(marker) {
     const archiveTime = this.props.mark.filter(date => {
       const localTime = new Date(date);
@@ -103,25 +101,21 @@ class Calendar extends Component {
       archiveTime
     });
   }
-
   onClickPrev() {
     this.setState({
       year: this.state.year - 1
     });
   }
-
   onClickNext() {
     this.setState({
       year: this.state.year + 1
     });
   }
-
   onClickModalOut() {
     this.setState({
       archiveTime: []
     });
   }
-
   render() {
     const month =[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 

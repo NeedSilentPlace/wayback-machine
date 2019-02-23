@@ -20,7 +20,6 @@ class Modal extends Component {
       return `${year}.${month}.${date} AM ${hours} : ${minutes}`;
     }
   }
-
   render() {
     const timeList = this.props.content;
     timeList.sort((a, b) => new Date(b).getTime() - new Date(a).getTime());

@@ -12,13 +12,11 @@ class TextBox extends Component {
     this.onTyping = this.onTyping.bind(this);
     this.onPressEnter = this.onPressEnter.bind(this);
   }
-
   onTyping(ev) {
     this.setState({
       text: ev.target.value
     });
   }
-
   onPressEnter(ev) {
     const isText = this.state.text.trim();
 
@@ -31,7 +29,6 @@ class TextBox extends Component {
       });
     }
   }
-
   render() {
     return (
       <div className='textContainer'>
