@@ -1,0 +1,19 @@
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+.textContainer > input {
+  background-color: #242425;
+  color: rgba(255, 255, 255, 0.4);
+  width: 300px;
+  height: 30px;
+  font-size: 14px;
+  box-sizing: border-box;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid orange;
+  margin-bottom: 15px;
+}
