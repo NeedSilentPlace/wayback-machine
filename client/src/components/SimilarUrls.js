@@ -9,11 +9,11 @@ class SimilarUrls extends Component {
         <div className='message'>Is this what you looking for?</div>
         {this.props.urls.map((url, index) => {
           return (
-          <div key={index} className='similarList'>
-            <Link to={`${url}`}>
-              {url}
-            </Link>
-          </div>
+            <div key={index} className='similarList'>
+              <Link to={`${url}`}>
+                {url}
+              </Link>
+            </div>
           );
         })}
         <Link to='/request/result' className='currentUrl' onClick={ev => this.props.onClickUrl(this.props.currentUrl)}>

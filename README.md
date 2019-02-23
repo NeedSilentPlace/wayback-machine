@@ -6,6 +6,6 @@
 - npm install을 한다
 - npm run client-install을 한다.
 - 설치 후 npm run dev
-- http://localhost:3000에서 실행된다.
+- http://localhost:3000 에서 실행된다.
 
 ## 감사합니다!

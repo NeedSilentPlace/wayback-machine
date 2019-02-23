@@ -50,7 +50,7 @@ router.post('/archive', function(req, res) {
         .catch(error => {
           console.log('Error at archive database save', error);
           res.json({ error: 'URL is not available to archive' });
-        })
+        });
     }
   });
 });
