@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
 const Inliner = require('inliner');
+const schedule = require('node-schedule');
 const index = require('./routes/index');
 const Url = require('./models/Urls');
 const Page = require('./models/Pages');
@@ -25,7 +26,6 @@ mongoose
   .catch(err => console.log(err));
 
 schedule.scheduleJob({ hour: 10, minute: 0, dayOfWeek: 1 }, function(){
-  console.log(new Date());
   Url.find({})
     .then(res => {
       const urls = res.map(data => data.value);
